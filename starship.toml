@@ -1,0 +1,119 @@
+format = """
+$os\
+$hostname\
+$username\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$fill\
+$c\
+$cmake\
+$conda\
+$container\
+$docker_context\
+$dotnet\
+$golang\
+$haskell\
+$java\
+$lua\
+$nodejs\
+$python\
+$rlang\
+$rust\
+$swift\
+$battery\
+$cmd_duration\
+$jobs\
+$time\
+$line_break\
+$character"""
+
+[fill]
+symbol = '.'
+
+[c]
+format = '[$name $version]($style) '
+
+[cmake]
+format = '[cmake ($version)]($style) '
+
+[conda]
+symbol = ' '
+ignore_base = true
+format = '[$symbol$environment]($style) '
+
+[cmd_duration]
+show_milliseconds = true
+format = '[󰔟 $duration]($style) '
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+
+[docker_context]
+format = '[ $context](blue bold) '
+
+[dotnet]
+symbol = '󰌛 '
+format = '[$symbol($version )(󰓾 $tfm )]($style) '
+
+[git_branch]
+symbol = ' '
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[[battery.display]]
+threshold = 100
+style = 'bold white'
+
+[golang]
+symbol = '󰟓 '
+format = '[$symbol($version )]($style) '
+
+[haskell]
+symbol = ' '
+format = '[$symbol($version )]($style) '
+
+[java]
+symbol = ' '
+format = '[${symbol}(${version} )]($style) '
+
+[nodejs]
+format = '[$symbol($version )]($style) '
+
+[os]
+disabled = false
+
+[os.symbols]
+Macos = ' '
+Arch = '󰣇 '
+Windows = ' '
+
+[python]
+symbol = ' '
+format = '[$symbol($version )]($style) '
+
+[package]
+symbol = '󰏗 '
+format = '[$symbol$version]($style) '
+
+[rlang]
+symbol = ' '
+format = '[$symbol($version )]($style) '
+
+[rust]
+symbol = ' '
+format = '[$symbol($version )]($style) '
+
+[swift]
+symbol = ' '
+format = '[$symbol($version )]($style) '
+
+[time]
+format = '[ $time]($style) '
+use_12hr = true
+disabled = false
+
+[username]
+show_always = true
+format = '[ $user ]($style)'
